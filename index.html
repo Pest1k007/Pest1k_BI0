@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest1k - Веб-разработка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Главный экран -->
+        <section id="home" class="screen active">
+            <div class="content">
+                <div class="avatar-container">
+                    <div class="avatar"></div>
+                </div>
+                <h1 class="title animated-text">Привет, друг!</h1>
+                <p class="subtitle">Добро пожаловать на мой сайт. Я <span class="highlight">Pest1k</span>, веб-разработчик</p>
+                
+                <div class="quote-box">
+                    <p class="quote">"Мне чужого не надо, но свое я возьму, чье бы оно не было"</p>
+                </div>
+                
+                <div class="buttons-container">
+                    <button class="btn btn-primary" onclick="showScreen('profile')">
+                        <i class="fas fa-user"></i> Мой профиль
+                    </button>
+                    <button class="btn btn-secondary" onclick="showScreen('project')">
+                        <i class="fas fa-code"></i> Мой проект
+                    </button>
+                    <button class="btn btn-tertiary" onclick="showScreen('price')">
+                        <i class="fas fa-tags"></i> Мой прайс
+                    </button>
+                </div>
+                
+                <button class="btn-contact" onclick="window.open('https://t.me/Pest1k_01', '_blank')">
+                    <i class="fab fa-telegram"></i> Перейти в личные сообщения
+                </button>
+            </div>
+            
+            <div class="particles" id="particles"></div>
+        </section>
+
+        <!-- Экран профиля -->
+        <section id="profile" class="screen">
+            <div class="content">
+                <button class="btn-back" onclick="showScreen('home')">
+                    <i class="fas fa-arrow-left"></i> Назад
+                </button>
+                
+                <h2 class="screen-title">Мой профиль</h2>
+                
+                <div class="profile-card">
+                    <div class="profile-avatar"></div>
+                    <h3>Pest1k</h3>
+                    <p class="profile-description">
+                        Веб-разработчик с фокусом на создании современных и адаптивных сайтов. 
+                        Специализируюсь на чистом коде без фреймворков, что обеспечивает быструю загрузку и высокую производительность.
+                    </p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Адаптивный дизайн</span>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> Telegram: @Pest1k_01</p>
+                        <p><i class="fas fa-globe"></i> Работаю с клиентами по всему миру</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экран проекта -->
+        <section id="project" class="screen">
+            <div class="content">
+                <button class="btn-back" onclick="showScreen('home')">
+                    <i class="fas fa-arrow-left"></i> Назад
+                </button>
+                
+                <h2 class="screen-title">Мой проект</h2>
+                
+                <div class="project-card">
+                    <h3>Telegram Эписток</h3>
+                    <p class="project-description">
+                        Мой Telegram-проект, где я делюсь полезными материалами, советами по веб-разработке и актуальными новостями из мира IT.
+                    </p>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-newspaper"></i>
+                            <h4>Полезные статьи</h4>
+                            <p>Актуальные материалы по веб-разработке</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Советы и хитрости</h4>
+                            <p>Практические рекомендации для разработчиков</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-comments"></i>
+                            <h4>Сообщество</h4>
+                            <p>Общение с единомышленниками</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-project" onclick="window.open('https://t.me/tglepistok', '_blank')">
+                        <i class="fab fa-telegram"></i> Перейти в проект
+                    </button>
+                    
+                    <p class="project-link">
+                        Или используйте прямую ссылку: 
+                        <a href="https://t.me/+pK9yM7xhO9kzMjcy" target="_blank">t.me/+pK9yM7xhO9kzMjcy</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экран прайса -->
+        <section id="price" class="screen">
+            <div class="content">
+                <button class="btn-back" onclick="showScreen('home')">
+                    <i class="fas fa-arrow-left"></i> Назад
+                </button>
+                
+                <h2 class="screen-title">Мой прайс</h2>
+                
+                <div class="price-section">
+                    <h3 class="price-main-title">Разработка сайтов на заказ</h3>
+                    <p class="price-range">от <span class="price-highlight">200</span> до <span class="price-highlight">1000</span> рублей</p>
+                    <p class="price-note">Стоимость зависит от сложности проекта</p>
+                    
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <div class="price-card-header">
+                                <h4>Простые сайты</h4>
+                                <div class="price">200-500 ₽</div>
+                            </div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Лендинг (одностраничный сайт)</li>
+                                <li><i class="fas fa-check"></i> Сайт-визитка</li>
+                                <li><i class="fas fa-check"></i> Адаптивный дизайн</li>
+                                <li><i class="fas fa-check"></i> Базовые анимации</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="price-card featured">
+                            <div class="price-card-header">
+                                <h4>Средней сложности</h4>
+                                <div class="price">500-800 ₽</div>
+                            </div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Многостраничный сайт</li>
+                                <li><i class="fas fa-check"></i> Формы обратной связи</li>
+                                <li><i class="fas fa-check"></i> Сложные анимации</li>
+                                <li><i class="fas fa-check"></i> Интеграция с API</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="price-card">
+                            <div class="price-card-header">
+                                <h4>Сложные проекты</h4>
+                                <div class="price">800-1000 ₽</div>
+                            </div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Полнофункциональные веб-приложения</li>
+                                <li><i class="fas fa-check"></i> Административная панель</li>
+                                <li><i class="fas fa-check"></i> Работа с базами данных</li>
+                                <li><i class="fas fa-check"></i> Сложная бизнес-логика</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="learning-section">
+                    <h3 class="learning-title">Обучение созданию сайтов</h3>
+                    
+                    <div class="learning-options">
+                        <div class="learning-option">
+                            <h4>Мануал</h4>
+                            <div class="learning-price">250 ₽</div>
+                            <p>Подробное руководство по созданию сайтов с пошаговыми инструкциями</p>
+                        </div>
+                        
+                        <div class="learning-option">
+                            <h4>Туториал</h4>
+                            <div class="learning-price">350 ₽</div>
+                            <p>Видео-уроки с объяснением ключевых аспектов веб-разработки</p>
+                        </div>
+                        
+                        <div class="learning-option">
+                            <h4>Личное обучение</h4>
+                            <div class="learning-price">500 ₽</div>
+                            <p>Индивидуальные занятия с разбором вашего кода и персональными советами</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <p>Заинтересовало? Свяжитесь со мной для обсуждения деталей!</p>
+                    <button class="btn-contact" onclick="window.open('https://t.me/Pest1k_01', '_blank')">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
